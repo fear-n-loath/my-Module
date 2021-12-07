@@ -1,8 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Elogic\Hello\Controller\Index;
+namespace Elogic\Ass\Controller\Index;
 
+use Elogic\Ass\Api\Data\GunsInterface;
+use Elogic\Ass\Api\GunsRepositoryInterface;
+use Elogic\Ass\Model\GunsRepository;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\View\Result\Page;
@@ -21,15 +24,22 @@ class Index implements HttpGetActionInterface
      */
     private RequestInterface $request;
 
+   // /* @var GunsRepositoryInterface
+   //  */
+  //  private GunsRepositoryInterface $gunsRepository;
 
 
     /* @param PageFactory $pageFactory
      * @param RequestInterface $request
      */
-    public function __construct(PageFactory $pageFactory, RequestInterface $request)
-    {
+    public function __construct(
+        PageFactory $pageFactory,
+        RequestInterface $request//,
+       // GunsRepositoryInterface $gunsRepository
+    ) {
         $this->pageFactory = $pageFactory;
         $this->request = $request;
+       // $this->gunsRepository = $gunsRepository;
     }
 
     /**
@@ -40,13 +50,13 @@ class Index implements HttpGetActionInterface
         // var_dump($this->request->getParam('g1'));
 
         $page = $this->pageFactory->create();
-        $block = $page->getLayout()->getBlock('hello_index_index');
-        $block->setData('key', $this->getResult($this->request));
+        $block = $page->getLayout()->getBlock('elogic_get');
+        $block->setData('key',$this->request->getParam('q1')); //$this->getResult1($this->request));
         return $page;
     }
 
-    public function getResult($request)
-    {
-        return $request->getParam('q1');
-    }
+    //public function getResult1($request)
+  //  {
+  //      return $request->getParam('q1');
+  //  }
 }

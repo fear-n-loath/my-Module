@@ -1,11 +1,11 @@
 <?php
-namespace Elogic\Hello\Block;
 
+namespace Elogic\Ass\Block;
+
+use Elogic\Ass\Api\GunsRepositoryInterface;
 use Magento\Framework\View\Element\Template;
+use Elogic\Ass\Plugin\HelloPlugin;
 
-/**
- * class Index
- */
 class Index extends Template
 {
     public function sayHello()

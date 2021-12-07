@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <general>
+            <general_conf>
+                <enable>1</enable>
+                <display_text>Lenuska kus kus</display_text>
+            </general_conf>
+            <types>
+                <allowes_types>img</allowes_types>
+            </types>
+        </general>
+        <front>
+            <items>
+                <display_text2>Lenuska kus </display_text2>
+            </items>
+        </front>
+    </default>
+</config>

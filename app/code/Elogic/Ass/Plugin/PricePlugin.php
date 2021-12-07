@@ -1,8 +1,9 @@
 <?php
 
-namespace Elogic\Hello\Plugin;
+namespace Elogic\Ass\Plugin;
 
 use Magento\TestFramework\Event\Magento;
+use Magento\Catalog\Model\Product;
 
 class PricePlugin
 {
@@ -10,4 +11,5 @@ class PricePlugin
     {
         return "777";
     }
+
 }

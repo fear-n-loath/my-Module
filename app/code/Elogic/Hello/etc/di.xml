@@ -3,11 +3,12 @@
    <type name="Elogic\Hello\Block\Index">
         <plugin name="Elogic_Hello_Plugin" type="Elogic\Hello\Plugin\HelloPlugin" sortOrder="10" disabled="true"  />
     </type>
-
+    <preference for="Elogic\Hello\Api\Data\CookieRepositoryInterface" type="Elogic\Hello\Model\CookieRepository"/>
+    <preference for="Elogic\Hello\Api\Data\CookieInterface" type="Elogic\Hello\Model\CookieModel"/>
     <type name="Elogic\Hello\Controller\Index\Index">
         <plugin name="Elogic_Hello_Controller_Plugin" type="Elogic\Hello\Plugin\ControllerPlugin" sortOrder="10" disabled="false"  />
     </type>
-    <preference for="Magento\Catalog\Model\Category" type="Elogic\Hello\Model\CategoryName"/>
+<!--    <preference for="Magento\Catalog\Model\Category" type="Elogic\Hello\Model\CategoryName"/>-->
     <type name="Magento\Catalog\Model\Product">
         <plugin name="Elogic_Hello_Price_Plugin" type="Elogic\Hello\Plugin\PricePlugin" sortOrder="1" disabled="false"/>
     </type>

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="guntab" translate="label" sortOrder="10">
+            <label>Gun tab</label>
+        </tab>
+        <section id="general" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Generalic</label>
+            <tab>guntab</tab>
+            <resource>Mageplaza_HelloWorld::helloworld_config</resource>
+            <group id="general_conf" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Display Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+            </group>
+            <group id="image" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Image</label>
+                <field id="allowed_types" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Image Upload Allowed Types</label>
+                <source_model>Elogic\Ass\Model\Config\Source\AllowedTypes</source_model>
+                </field>
+                <field id="image_text" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                        <label>Image Text</label>
+                        <comment>This text will display on the frontend.</comment>
+                </field>
+            </group>
+        </section>
+        <section id="front" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+        <class>separator</class>
+        <label>Frontend</label>
+        <tab>guntab</tab>
+        <resource>Mageplaza_HelloWorld::helloworld_config</resource>
+            <group id="items" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Items</label>
+                <field id="display_text2" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Display Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+                <field id="items_types" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>My entity</label>
+                    <source_model>Elogic\Ass\Model\Config\Source\Items</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

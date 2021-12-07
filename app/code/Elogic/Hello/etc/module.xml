@@ -4,6 +4,7 @@
     <module name="Elogic_Hello" setup_version="1.0.0">
      <sequance>
          <module  name="Magento_Catalog" />
+         <module name="Magento_Quote"/>
      </sequance>
     </module>
 

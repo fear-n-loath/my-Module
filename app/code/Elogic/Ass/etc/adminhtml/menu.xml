@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Elogic_Ass::helloworld" title="Hello World" module="Elogic_Ass" sortOrder="51" resource="Elogic_Ass::helloworld"/>
+        <add id="Elogic_Ass_HelloWorld::post" title="Manage Posts" module="Elogic_Ass" sortOrder="10" action="elogic_ass/post" resource="Elogic_Ass::post" parent="Elogic_Ass::helloworld"/>
+        <add id="Elogic_Ass_HelloWorld::hello_configuration" title="Configuration" module="Elogic_Ass" sortOrder="99" parent="Elogic_Ass::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="Elogic_Ass::helloworld_configuration"/>
+        <add id="Elogic_Ass::greetings" title="Greetings" translate="title" module="Elogic_Ass" parent="Elogic_Ass::helloworld" sortOrder="50" dependsOnModule="Elogic_Ass" resource="Elogic_Ass::greetings"/>
+        <add id="Elogic_Ass::greetings_hello" title="Hello World" translate="title" module="Elogic_Ass" parent="Elogic_Ass::greetings" sortOrder="10" dependsOnModule="Elogic_Ass" action="adminpage/hello" resource="Elogic_Ass::greetings"/>
+    </menu>
+</config>
