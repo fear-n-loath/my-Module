@@ -1,0 +1,17 @@
+<?php
+
+use Elogic\Ass\Block\GetModel;
+
+/**
+ * @var GetModel $block
+ */
+
+  $a = $block->getModel();
+  //$b = $block->getCollection();
+
+?>
+<h1><?php   echo $a->getId() ?> <h1>
+        <h2> <?php echo $a->getName() ?> <h2>
+                <h2> <?php echo $a->getType() ?> <h2>
+                        <h2> <?php echo $a->getCaliber() ?> <h2>
+<h5> <?php //foreach ($block->getCollection() as $item) echo $item ?> </h5>
